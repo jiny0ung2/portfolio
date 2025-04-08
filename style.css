@@ -1,0 +1,150 @@
+body {
+    font-family: 'Noto Sans KR', sans-serif;
+    margin: 0;
+    padding: 0;
+    line-height: 1.6;
+    background-color: #fdf6e3;
+    color: brown;
+  }
+  
+  /* 사이드 네비게이션 */
+  nav {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 180px;
+    height: 100%;
+    background-color: #fff0e5;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 30px;
+    box-shadow: 2px 0 5px rgba(0, 0, 0, 0.05);
+    gap: 20px;
+    overflow-y: auto;
+    z-index: 100;
+  }
+  
+  .nav-logo-wrapper {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    padding: 10px 0;
+  }
+  
+  .nav-logo {
+    width: 90px;
+    height: 90px;
+    object-fit: cover;
+  }
+  
+  nav a {
+    color: brown;
+    text-decoration: none;
+    font-weight: 700;
+    transition: color 0.3s ease;
+  }
+  
+  nav a:hover {
+    color: #f28d79;
+  }
+  
+  nav hr {
+    width: 60%;
+    border: none;
+    border-top: 1px solid #f4c6b4;
+    margin: 5px 0;
+  }
+  
+  /* 헤더 */
+  header {
+    margin-left: 200px;
+    background-color: #f7b7a3;
+    color: brown;
+    padding: 20px 0;
+    text-align: center;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+  }
+  
+  /* 공통 섹션 */
+  section {
+    margin-left: 200px;
+    padding: 40px 20px;
+    max-width: 900px;
+    border-bottom: 1px dashed #f7d4c6;
+  }
+  
+  h2 {
+    color: #e38370;
+    margin-bottom: 14px;
+  }
+  
+  /* 프로필 + 연락처 수평 정렬 */
+  .overview-row {
+    display: flex;
+    align-items: flex-start;
+    gap: 30px;
+    flex-wrap: wrap;
+    margin-top: 20px;
+  }
+  
+  .profile-img {
+    width: 230px;
+    height: auto;
+    border-radius: 15px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+  }
+  
+  .contact {
+    flex: 1;
+    padding: 20px;
+    background-color: #fffaf5;
+    border: 1px solid #ffe4d7;
+    border-radius: 12px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.04);
+  }
+  
+  .contact-item {
+    margin-bottom: 10px;
+  }
+  
+  .contact-item .label {
+    font-weight: bold;
+    color: #d67868;
+    margin-right: 8px;
+  }
+  
+  .project-table-wrapper {
+    margin-top: 10px;
+    overflow-x: auto;
+  }
+  
+  .project-table {
+    width: 100%;
+    border-collapse: collapse;
+    background-color: #fff;
+    border: 1px solid #f5d5c1;
+  }
+  
+  .project-table td {
+    padding: 10px;
+    border: 1px solid #f5d5c1;
+    word-break: break-word;
+  }
+  
+  details summary {
+    cursor: pointer;
+    font-weight: bold;
+    color: #a66363;
+    background-color: #fff2ea;
+    padding: 8px;
+    border-radius: 8px;
+    margin-bottom: 8px;
+  }
+  
+  details ul {
+    margin-top: 10px;
+    padding-left: 20px;
+  }
+
+  
