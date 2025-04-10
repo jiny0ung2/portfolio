@@ -2,140 +2,21 @@
 <html lang="ko">
 <head>
   <meta charset="UTF-8">
-  <title>문의 폼</title>
-  <style>
-    /* 기본 페이지 스타일 */
-    body {
-      display: flex;
-      justify-content: center;
-      padding: 40px;
-      font-family: Arial, sans-serif;
-      background-color: #f0f2f5;
-    }
-
-    /* 폼 컨테이너 스타일 */
-    form {
-      width: 520px;
-      padding: 30px;
-      border-radius: 10px;
-      background-color: #fff;
-    }
-
-    /* 입력 그룹 스타일 */
-    fieldset {
-      margin-bottom: 30px;
-      border: 2px solid brown;
-      border-radius: 12px;
-      padding: 20px;
-      background-color: #fefefe;
-      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
-    }
-
-    legend {
-      font-weight: bold;
-      font-size: 1.1em;
-      color: brown;
-      padding: 0 8px;
-    }
-
-    label {
-      display: block;
-      margin-top: 14px;
-      font-weight: bold;
-    }
-
-    input, textarea, select {
-      width: 100%;
-      padding: 10px;
-      margin-top: 6px;
-      box-sizing: border-box;
-      border: 1px solid #ccc;
-      border-radius: 6px;
-    }
-
-    input[type="checkbox"],
-    input[type="radio"] {
-      width: auto;
-      margin-right: 6px;
-    }
-
-    button {
-      margin-top: 20px;
-      width: 100%;
-      padding: 12px;
-      background-color: brown;
-      color: white;
-      border: none;
-      border-radius: 6px;
-      font-size: 16px;
-      cursor: pointer;
-    }
-
-    button:hover {
-      background-color: #a0522d;
-    }
-  </style>
+  <title>테스트 폼</title>
 </head>
 <body>
 
-<!-- 구글 폼과 연결된 사용자 정의 폼 -->
 <form action="https://docs.google.com/forms/d/e/1FAIpQLScUo5vbrPQOrAbcq87TNMGSR0f-Zc7JgDwtaV0yf5PzPzvvKA/formResponse" method="POST" target="_blank">
+  
+  <!-- 이름 입력 -->
+  <label for="name">이름</label>
+  <input type="text" id="name" name="entry.2057877931" required>
 
-  <!-- 기본 정보 영역 -->
-  <fieldset>
-    <legend>기본 정보</legend>
+  <!-- 이메일 입력 -->
+  <label for="email">이메일</label>
+  <input type="email" id="email" name="entry.1812163734" required>
 
-    <!-- 이름 입력 -->
-    <label for="name">이름</label>
-    <input type="text" id="name" name="entry.1747475809" placeholder="홍길동" required>
-
-    <!-- 이메일 입력 -->
-    <label for="email">이메일</label>
-    <input type="email" id="email" name="entry.1873059231" placeholder="example@domain.com" required>
-
-    <!-- 전공 (데이터 목록 포함) -->
-    <label for="major">전공</label>
-    <input list="majors" id="major" name="entry.366153632:" placeholder="전공을 입력 또는 선택하세요">
-    <datalist id="majors">
-      <option value="컴퓨터공학과">
-      <option value="소프트웨어학과">
-      <option value="통계학과">
-    </datalist>
-  </fieldset>
-
-  <!-- 관심 정보 영역 -->
-  <fieldset>
-    <legend>관심 정보</legend>
-
-    <!-- 관심 분야 (체크박스 그룹) -->
-    <label>관심 분야</label>
-    <input type="checkbox" name="entry.1676761988" value="웹 개발">웹 개발
-    <input type="checkbox" name="entry.1676761988" value="앱 개발">앱 개발
-    <input type="checkbox" name="entry.1676761988" value="AI">AI
-    <input type="checkbox" name="entry.1676761988" value="기타">기타
-
-    <!-- 학년 (라디오 버튼 그룹) -->
-    <label>학년</label>
-    <input type="radio" name="entry.2113691828" value="1학년">1학년
-    <input type="radio" name="entry.2113691828" value="2학년">2학년
-    <input type="radio" name="entry.2113691828" value="3학년">3학년
-
-    <!-- 경험 수준 (콤보박스) -->
-    <label for="experience">경험 수준</label>
-    <select id="experience" name="entry.834969721">
-      <option value="">선택하세요</option>
-      <option value="초보자">초보자</option>
-      <option value="중급자">중급자</option>
-      <option value="고급자">고급자</option>
-    </select>
-
-    <!-- 추가 의견 (여러 줄 텍스트) -->
-    <label for="message">추가 의견</label>
-    <textarea id="message" name="entry.1411822838" rows="4" placeholder="전달하고 싶은 내용을 자유롭게 입력해주세요."></textarea>
-  </fieldset>
-
-  <!-- 제출 버튼 -->
-  <button type="submit">제출하기</button>
+  <button type="submit">제출</button>
 </form>
 
 </body>
