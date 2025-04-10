@@ -3,14 +3,22 @@
   <head>
     <meta charset="utf-8">
     <title>Portfolio of Eo JinYoung</title>
+    <!-- 외부 스타일시트 연결 -->
     <link rel="stylesheet" type="text/css" href="style.css">
   </head>
   <body>
-    <header><h1>어진영의 포트폴리오</h1></header>
+    
+    <!-- 헤더 = 사이트 제목 (포트폴리오 이름) -->
+    <header>
+      <h1>어진영의 포트폴리오</h1>
+    </header>
+
+    <!-- 사이드 네비게이션 (로고 이미지 + 각 섹션 앵커 링크) -->
     <nav>
-        <div class="nav-logo-wrapper">
-            <img src="media/img2.JPG" alt="로고" class="nav-logo">
-          </div>
+      <div class="nav-logo-wrapper">
+        <img src="media/img2.JPG" alt="로고" class="nav-logo">
+      </div>
+      <!-- 각 링크는 페이지 내 id와 연결되어 있음 -->
       <a href="#overview">소개</a>
       <hr>
       <a href="#career">경력</a>
@@ -20,38 +28,50 @@
       <a href="#projects">프로젝트</a>
       <hr>
     </nav>
+
+    <!-- 소개 섹션 (프로필 이미지 + 연락 수단 모음) -->
     <section class="overview" id="overview">
-        <div class="overview-row">
-          <img src="media/media1.JPG" alt="프로필 이미지" class="profile-img" width="250">
-      
-          <div class="contact">
-            <h2>Contact & Channels</h2>
-            <div class="contact-item">
-              <span class="label">✉️ e-mail:</span>
-              <a href="mailto:cvls2791@naver.com" target="_blank">cvls2791@naver.com</a>
-            </div>
-            <div class="contact-item">
-              <span class="label">📞 phone:</span>
-              <a href="tel:+821049772791" target="_blank">010-4977-2791</a>
-            </div>
-            <div class="contact-item">
-              <span class="label">🐱 Github:</span>
-              <a href="https://github.com/jiny0ung2" target="_blank">https://github.com/jiny0ung2</a>
-            </div>
-            <div class="contact-item">
-              <span class="label">💡 Blog:</span>
-              <a href="https://jiny0ung.tistory.com" target="_blank">Tistory</a>
-            </div>
-            <div class="contact-item">
-              <span class="label">🖥️ Notion:</span>
-              <a href="https://www.notion.so/..." target="_blank">2025년 불렛저널</a>
-            </div>
+      <div class="overview-row">
+        <!-- 프로필 이미지 (미디어 파일로 연결됨) -->
+        <img src="media/media1.JPG" alt="프로필 이미지" class="profile-img" width="250">
+        
+        <!-- 연락처 정보 -->
+        <div class="contact">
+          <h2>Contact & Channels</h2>
+          <!-- 이메일 -->
+          <div class="contact-item">
+            <span class="label">✉️ e-mail:</span>
+            <a href="mailto:cvls2791@naver.com" target="_blank">cvls2791@naver.com</a>
+          </div>
+          <!-- 전화번호 -->
+          <div class="contact-item">
+            <span class="label">📞 phone:</span>
+            <a href="tel:+821049772791" target="_blank">010-4977-2791</a>
+          </div>
+          <!-- 깃허브 링크 -->
+          <div class="contact-item">
+            <span class="label">🐱 Github:</span>
+            <a href="https://github.com/jiny0ung2" target="_blank">https://github.com/jiny0ung2</a>
+          </div>
+          <!-- 블로그 링크 -->
+          <div class="contact-item">
+            <span class="label">💡 Blog:</span>
+            <a href="https://jiny0ung.tistory.com" target="_blank">Tistory</a>
+          </div>
+          <!-- 노션 링크 -->
+          <div class="contact-item">
+            <span class="label">🖥️ Notion:</span>
+            <a href="https://www.notion.so/..." target="_blank">2025년 불렛저널</a>
           </div>
         </div>
-      </section>      
+      </div>
+    </section>
+
+    <!-- 경력 섹션 -->
     <section class="career" id="career">
       <h2>💼 경력사항</h2>
       <details>
+        <!-- summary 태그 클릭 시 상세 내용 표시 -->
         <summary>덕성여자대학교 디지털소프트웨어공학부 (2025.03~)</summary>
         <div>
           <ul>
@@ -60,6 +80,8 @@
         </div>
       </details>
     </section>
+
+    <!-- 학력 섹션 -->
     <section class="education" id="education">
       <h2>🏫 학력</h2>
       <ul>
@@ -69,13 +91,19 @@
         <li>방학초등학교 졸업 (2012-2017)</li>
       </ul>
     </section>
+
+    <!-- 프로젝트 섹션 (프로젝트 설명 + 테이블 형식의 링크 모음) -->
     <section class="projects" id="projects">
       <h2>📁 프로젝트</h2>
       <ol>
-        <li>덕성여자대학교 맛집 소개 프로젝트<br>
+        <li>
+          덕성여자대학교 맛집 소개 프로젝트<br>
           : 덕성여자대학교 주변의 맛집 정보를 담은 웹 사이트 제작
+
+          <!-- 프로젝트 관련 링크를 담은 테이블 -->
           <div class="project-table-wrapper">
             <table class="project-table">
+              <!-- Git 저장소 링크 -->
               <tr>
                 <td><h4>🔗 Git 저장소</h4></td>
                 <td>
@@ -84,17 +112,26 @@
                   </a>
                 </td>
               </tr>
+              <!-- 실제 배포된 웹 페이지 링크 -->
               <tr>
                 <td><h4>🔗 웹 페이지</h4></td>
                 <td>
-                    <a href="https://jiny0ung2.github.io/duksungRestaurant/" target="_blank"> https://jiny0ung2.github.io/duksungRestaurant/
-                    </a>
+                  <a href="https://jiny0ung2.github.io/duksungRestaurant" target="_blank">
+                    https://jiny0ung2.github.io/duksungRestaurant
+                  </a>
                 </td>
               </tr>
             </table>
-          </div>          
+          </div>
         </li>
       </ol>
     </section>
+
   </body>
+
+  <!-- 고정 푸터 (항상 하단에 표시되는 사이트 정보 영역) -->
+  <footer class="fixed-footer">
+    <p>페이지 제작자: 어진영 | 이메일: <a href="mailto:cvls2791@naver.com">cvls2791@naver.com</a></p>
+    <p>이 페이지는 어진영의 포트폴리오 웹 프로젝트로, HTML/CSS 학습 목적으로 제작되었습니다.</p>
+  </footer>
 </html>
