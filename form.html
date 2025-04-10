@@ -67,38 +67,50 @@
 </head>
 <body>
 
+<!-- 구글 폼과 연결된 사용자 정의 폼 -->
 <form action="https://docs.google.com/forms/d/e/1FAIpQLScUo5vbrPQOrAbcq87TNMGSR0f-Zc7JgDwtaV0yf5PzPzvvKA/formResponse" method="POST" target="_blank">
+  
+  <!-- 기본 정보 -->
   <fieldset>
     <legend>기본 정보</legend>
 
+    <!-- 1. 한 줄 텍스트 (일반) -->
     <label for="name">이름</label>
     <input type="text" id="name" name="entry.1747475809" placeholder="홍길동" required>
 
+    <!-- 2. 이메일 -->
     <label for="email">이메일</label>
     <input type="email" id="email" name="entry.1873059231" placeholder="example@domain.com" required>
 
+    <!-- 3. 데이터목록 입력 -->
     <label for="major">전공</label>
-    <input type="text" id="major" name="entry.366153632" placeholder="예: 디소공" required>
+    <input list="majors" id="major" name="entry.366153632" placeholder="전공을 선택 또는 입력하세요" required>
+    <datalist id="majors">
+      <option value="디지털소프트웨어공학과">
+      <option value="컴퓨터공학과">
+      <option value="통계학과">
+    </datalist>
   </fieldset>
 
+  <!-- 학업/관심 정보 -->
   <fieldset>
     <legend>관심 정보</legend>
 
+    <!-- 4. 체크박스 -->
     <label for="interest">관심 분야</label>
-    <select id="interest" name="entry.1676761988" required>
-      <option value="">선택하세요</option>
-      <option value="웹 개발">웹 개발</option>
-      <option value="앱 개발">앱 개발</option>
-      <option value="AI">AI</option>
-      <option value="기타">기타</option>
-    </select>
+    <input type="checkbox" name="entry.1676761988" value="웹 개발">웹 개발
+    <input type="checkbox" name="entry.1676761988" value="앱 개발">앱 개발
+    <input type="checkbox" name="entry.1676761988" value="AI">AI
+    <input type="checkbox" name="entry.1676761988" value="기타">기타
 
+    <!-- 5. 라디오버튼 -->
     <label>학년</label>
-    <input type="radio" name="entry.2113691828" value="1학년" required> 1학년
-    <input type="radio" name="entry.2113691828" value="2학년"> 2학년
-    <input type="radio" name="entry.2113691828" value="3학년"> 3학년
-    <input type="radio" name="entry.2113691828" value="4학년"> 4학년
+    <input type="radio" name="entry.2113691828" value="1학년" required>1학년
+    <input type="radio" name="entry.2113691828" value="2학년">2학년
+    <input type="radio" name="entry.2113691828" value="3학년">3학년
+    <input type="radio" name="entry.2113691828" value="4학년">4학년
 
+    <!-- 6. 콤보박스 -->
     <label for="experience">경험 수준</label>
     <select id="experience" name="entry.834969721" required>
       <option value="">선택하세요</option>
@@ -107,8 +119,9 @@
       <option value="고급자">고급자</option>
     </select>
 
+    <!-- 7. 여러 줄 텍스트 -->
     <label for="message">추가 의견</label>
-    <textarea id="message" name="entry.1411822838" rows="4" placeholder="하고 싶은 말을 자유롭게 적어주세요 :)"></textarea>
+    <textarea id="message" name="entry.1411822838" rows="4" placeholder="하고 싶은 말이나 질문을 자유롭게 적어주세요 :)"></textarea>
   </fieldset>
 
   <button type="submit">제출하기</button>
