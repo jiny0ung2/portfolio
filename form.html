@@ -1,22 +1,117 @@
 <!DOCTYPE html>
 <html lang="ko">
 <head>
-  <meta charset="UTF-8">
-  <title>테스트 폼</title>
+  <meta charset="UTF-8" />
+  <title>문의 폼</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f0f2f5;
+      display: flex;
+      justify-content: center;
+      padding: 40px;
+    }
+    form {
+      background-color: #fff;
+      padding: 30px;
+      border-radius: 12px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+      width: 100%;
+      max-width: 520px;
+    }
+    fieldset {
+      border: 2px solid brown;
+      border-radius: 12px;
+      padding: 20px;
+      margin-bottom: 20px;
+      background-color: #fefefe;
+    }
+    legend {
+      font-weight: bold;
+      color: brown;
+      font-size: 1.1em;
+    }
+    label {
+      display: block;
+      margin-top: 12px;
+      font-weight: bold;
+    }
+    input, select, textarea {
+      width: 100%;
+      padding: 8px;
+      margin-top: 4px;
+      border-radius: 6px;
+      border: 1px solid #ccc;
+      box-sizing: border-box;
+    }
+    input[type="checkbox"],
+    input[type="radio"] {
+      width: auto;
+      margin-right: 6px;
+    }
+    button {
+      width: 100%;
+      margin-top: 20px;
+      padding: 12px;
+      background-color: brown;
+      color: white;
+      border: none;
+      border-radius: 6px;
+      font-size: 16px;
+      cursor: pointer;
+    }
+    button:hover {
+      background-color: #a0522d;
+    }
+  </style>
 </head>
 <body>
 
 <form action="https://docs.google.com/forms/d/e/1FAIpQLScUo5vbrPQOrAbcq87TNMGSR0f-Zc7JgDwtaV0yf5PzPzvvKA/formResponse" method="POST" target="_blank">
-  
-  <!-- 이름 입력 -->
-  <label for="name">이름</label>
-  <input type="text" id="name" name="entry.2057877931" required>
+  <fieldset>
+    <legend>기본 정보</legend>
 
-  <!-- 이메일 입력 -->
-  <label for="email">이메일</label>
-  <input type="email" id="email" name="entry.1812163734" required>
+    <label for="name">이름</label>
+    <input type="text" id="name" name="entry.1747475809" placeholder="홍길동" required>
 
-  <button type="submit">제출</button>
+    <label for="email">이메일</label>
+    <input type="email" id="email" name="entry.1873059231" placeholder="example@domain.com" required>
+
+    <label for="major">전공</label>
+    <input type="text" id="major" name="entry.366153632" placeholder="예: 디소공" required>
+  </fieldset>
+
+  <fieldset>
+    <legend>관심 정보</legend>
+
+    <label for="interest">관심 분야</label>
+    <select id="interest" name="entry.1676761988" required>
+      <option value="">선택하세요</option>
+      <option value="웹 개발">웹 개발</option>
+      <option value="앱 개발">앱 개발</option>
+      <option value="AI">AI</option>
+      <option value="기타">기타</option>
+    </select>
+
+    <label>학년</label>
+    <input type="radio" name="entry.2113691828" value="1학년" required> 1학년
+    <input type="radio" name="entry.2113691828" value="2학년"> 2학년
+    <input type="radio" name="entry.2113691828" value="3학년"> 3학년
+    <input type="radio" name="entry.2113691828" value="4학년"> 4학년
+
+    <label for="experience">경험 수준</label>
+    <select id="experience" name="entry.834969721" required>
+      <option value="">선택하세요</option>
+      <option value="초보자">초보자</option>
+      <option value="중급자">중급자</option>
+      <option value="고급자">고급자</option>
+    </select>
+
+    <label for="message">추가 의견</label>
+    <textarea id="message" name="entry.1411822838" rows="4" placeholder="하고 싶은 말을 자유롭게 적어주세요 :)"></textarea>
+  </fieldset>
+
+  <button type="submit">제출하기</button>
 </form>
 
 </body>
